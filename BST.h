@@ -32,7 +32,7 @@ private:
   BSTNode<Key,E>* removehelp(BSTNode<Key, E>*, const Key&);
   E* findhelp(BSTNode<Key, E>*, const Key&) const;
   void printhelp(BSTNode<Key, E>*, int) const;
-  void vist(BSTNode<Key, E>*) const;
+  void visit(BSTNode<Key, E>*) const;
 
 public:
   BST() { root = NULL; nodecount = 0; }  // Constructor
@@ -96,8 +96,8 @@ public:
 
 // Visit -- prints out root
 template <typename Key, typename E>
-void BST<Key, E>::vist(BSTNode<Key,E>* r) const {
-    cout << "Node - " << r->element() << endl;
+void BST<Key, E>::visit(BSTNode<Key,E>* r) const {
+    cout << "Node - " << r->key() << ' ' << r->element() << endl;
 }
 
 // Clean up BST by releasing space back free store
@@ -194,8 +194,6 @@ void BST<Key, E>::
 printhelp(BSTNode<Key, E>* root, int level) const {
   if (root == NULL) return;           // Empty tree
   printhelp(root->left(), level+1);   // Do left subtree
-  for (int i=0; i<level; i++)         // Indent to level
-    cout << "  ";
-  cout << root->key() << "\n";        // Print node value
+  visit(root);						  // Print node value
   printhelp(root->right(), level+1);  // Do right subtree
 }
