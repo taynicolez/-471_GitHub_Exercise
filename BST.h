@@ -218,3 +218,8 @@ void printPostOrder() const
 {
   // this is my function :)
 }
+
+void printPreOrder() const {
+  //Here is my fancy function. Please don't fire me.
+}
+}
