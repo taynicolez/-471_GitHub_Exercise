@@ -197,7 +197,29 @@ printhelp(BSTNode<Key, E>* root, int level) const {
   visit(root);						  // Print node value
   printhelp(root->right(), level+1);  // Do right subtree
 }
-printPreOrder() const {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void printPostOrder() const
+{
+  // this is my function :)
+}
+
+void printPreOrder() const {
   //Here is my fancy function. Please don't fire me.
 }
 }
