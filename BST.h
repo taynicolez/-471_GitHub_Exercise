@@ -198,22 +198,6 @@ printhelp(BSTNode<Key, E>* root, int level) const {
   printhelp(root->right(), level+1);  // Do right subtree
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 void printPostOrder() const
 {
   // this is my function :)
